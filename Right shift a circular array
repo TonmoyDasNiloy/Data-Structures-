@@ -1,0 +1,24 @@
+# Function to perform a right circular shift on an array
+def right_circular_shift(arr, shift):
+    # Length of the array
+    n = len(arr)
+    
+    # Ensure the shift value is within the bounds of the array length
+    shift = shift % n  
+
+    # Initialize a new array for the shifted values
+    shifted_arr = [None] * n
+    
+    # Perform the right circular shift
+    for i in range(n):
+        shifted_arr[(i + shift) % n] = arr[i]
+
+    return shifted_arr
+
+# Example usage:
+my_array = [1, 2, 3, 4, 5]
+shift_amount = 2
+shifted_array = right_circular_shift(my_array, shift_amount)
+
+# Print the result after shifting
+print("Array after right circular shift:", shifted_array)  # Output: [4, 5, 1, 2, 3]
