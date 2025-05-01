@@ -1,0 +1,13 @@
+import numpy as np
+def mirror_matrix(m):
+    m = np.array(m)
+    row, col = m.shape
+    for i in range(row):
+        for j in range(col // 2):
+            m[i][j], m[i][col - 1 - j] = m[i][col - 1 - j], m[i][j]
+    print("Mirrored matrix:")
+    print(m)
+
+# Example 3x3 matrix
+m = [[1, 2, 3], [5, 6, 7], [9, 10, 11]]
+mirror_matrix(m)
