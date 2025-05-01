@@ -1,0 +1,7 @@
+def copyArray(source):
+  newArray=np.array([0]*len(source))
+  for i in range(len(source)):
+    newArray[i]=source[i]
+  return newArray
+a=[1, 3, 5, 11]
+copyArray(a)
