@@ -1,0 +1,24 @@
+import numpy as np
+
+def row_wise(matrix):
+    """
+    Prints the elements of the 2D array row-wise.
+    
+    Parameters:
+    matrix (np.ndarray): The 2D numpy array to be printed row-wise.
+    
+    Returns:
+    None (prints the array row by row)
+    """
+    # Get the number of rows and columns in the matrix
+    rows, cols = matrix.shape
+    
+    # Traverse each row
+    for i in range(rows):
+        for j in range(cols):
+            print(matrix[i][j], end=' ')  # Print each element in the row
+        print()  # Print a newline after each row
+
+# Example usage
+m = np.array([[1, 2, 3, 4], [5, 6, 7, 8], [9, 10, 11, 12]])
+row_wise(m)  # Call the function to print row-wise
