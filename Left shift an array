@@ -1,0 +1,15 @@
+# Perform a left shift on the array
+# This moves each element one position to the left and places None at the end
+
+# Original list of integers
+number_list = [1, 2, 3, 4, 5, 6, 7]
+
+# Shift elements to the left by one position
+for index in range(1, len(number_list)):
+    number_list[index - 1] = number_list[index]
+
+# Set the last element to None after the shift
+number_list[len(number_list) - 1] = None
+
+# Print the updated list after left shift
+print("List after left shift:", number_list)
