@@ -1,0 +1,14 @@
+import numpy as np
+def sum_secondary_diagonal(matrix):
+    matrix = np.array(matrix)
+    rows, cols = matrix.shape
+
+    total_sum = 0
+    for i in range(rows):
+        total_sum += matrix[i][cols - 1 - i]  # Secondary diagonal condition
+
+    return total_sum
+
+# Example usage
+m = [[1, 2, 3], [5, 6, 7], [9, 10, 11]]  # 3x3 matrix
+print("Secondary diagonal sum:", sum_secondary_diagonal(m))
