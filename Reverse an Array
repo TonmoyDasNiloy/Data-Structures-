@@ -1,0 +1,17 @@
+# Original list of integers
+original_list = [1, 2, 3, 4, 5, 6]
+
+# Determine the length of the list
+list_length = len(original_list)
+
+# Initialize a new list to store the reversed version
+reversed_list = [None] * list_length
+
+# Fill the reversed_list by iterating backward through original_list
+reverse_index = 0
+for index in range(list_length - 1, -1, -1):
+    reversed_list[reverse_index] = original_list[index]
+    reverse_index += 1
+
+# Print the reversed list
+print("Reversed list:", reversed_list)
