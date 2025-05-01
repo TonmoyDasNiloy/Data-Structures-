@@ -1,0 +1,15 @@
+# Original list of integers
+number_list = [1, 2, 3, 4, 5, 6]
+
+# Input: index of the element to be removed
+remove_index = int(input("Enter the index of the element to remove: "))
+
+# Shift elements to the left to fill the gap left by the removed element
+for index in range(remove_index, len(number_list) - 1):
+    number_list[index] = number_list[index + 1]
+
+# Set the last element to None as it's now redundant
+number_list[len(number_list) - 1] = None
+
+# Print the updated list after removal
+print("List after removal:", number_list)
