@@ -1,0 +1,25 @@
+# Convert a circular array into a linear array
+# Original circular array with elements arranged circularly
+circular_array = [4, 5, 6, None, None, 1, 2, 3]
+
+# Length of the circular array
+array_length = len(circular_array)
+
+# Size of the array (number of valid elements)
+valid_size = 6
+
+# Initialize the linear array with None values
+linear_array = [None] * array_length
+
+# Define the start position in the circular array
+start_index = 5
+current_index = start_index
+
+# Fill the linear array by extracting elements from the circular array
+for i in range(valid_size):
+    linear_array[i] = circular_array[current_index]
+    # Update the index for circular behavior
+    current_index = (current_index + 1) % array_length
+
+# Print the linear array after conversion
+print("Linear array:", linear_array)
