@@ -1,0 +1,31 @@
+import numpy as np
+def column_wise_summation(matrix):
+    # Convert the matrix to a numpy array
+    matrix = np.array(matrix)
+    
+    # Get the number of rows and columns
+    rows, cols = matrix.shape
+    
+    # Initialize a result array to store the sum of each column
+    column_sums = np.zeros((1, cols), dtype=int)
+    
+    # Iterate through each column
+    for j in range(cols):
+        sum_col = 0  # Initialize sum for the current column
+        
+        # Iterate through each element in the column
+        for i in range(rows):
+            sum_col += matrix[i][j]
+        
+        # Store the column sum in the result array
+        column_sums[0][j] = sum_col
+    
+    return column_sums
+
+# Example usage
+m = [[1, 2, 3, 4],
+     [5, 6, 7, 8],
+     [9, 10, 11, 12]]
+
+print("Column-wise summation:", column_wise_summation(m))
+
