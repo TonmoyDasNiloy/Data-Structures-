@@ -1,0 +1,20 @@
+import numpy as np
+def sum_primary_diagonal(matrix):
+    # Convert the matrix to a numpy array
+    matrix = np.array(matrix)
+    
+    # Initialize the total sum variable
+    total_sum = 0
+    
+    # Get the number of rows and columns
+    rows, cols = matrix.shape
+    
+    # Iterate over each element and add the diagonal elements
+    for i in range(min(rows, cols)):
+        total_sum += matrix[i][i]  # Add the diagonal element
+    
+    return total_sum
+
+# Example usage
+m = [[1, 2, 3], [5, 6, 7], [9, 10, 11]]  # 3x3 matrix
+print("Primary diagonal sum:", sum_primary_diagonal(m))
