@@ -1,0 +1,6 @@
+# Initialize a list with some integer values
+number_list = [123, 456, 789]
+
+# Iterate through the list in reverse order using index
+for index in range(len(number_list) - 1, -1, -1):
+    print(number_list[index], end=' ')
